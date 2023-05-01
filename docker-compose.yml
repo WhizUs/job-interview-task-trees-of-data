@@ -14,10 +14,12 @@ services:
   app:
     image: ghcr.io/whizus/job-interview-task-trees-of-data:latest
     environment:
-      - Seed=true
-      - ConnectionStrings__AppDbContext=Server=host.docker.internal,1433; Database=app;Trusted_Connection=False;Encrypt=False;User Id=sa;Password=pass@word1
+      - Seed=${Seed:-true}
+      - ConnectionStrings__AppDbContext=Server=db,1433; Database=app;Trusted_Connection=False;Encrypt=False;User Id=sa;Password=pass@word1
     ports:
       - 8080:80
+    depends_on:
+      - db
 
 volumes:
   db:
