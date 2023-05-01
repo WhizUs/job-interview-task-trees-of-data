@@ -5,7 +5,7 @@ In this task we will look into how we may need to optimize some SQL statements t
 ## Guidance
 
 1. Start this project in [Github Codespaces](https://github.com/features/codespaces)[^1]
-2. Start the db and app `docker compose up`[^2]
+2. Start the db `docker compose up db` (wait until sqlserver manages to start, it may take time) and app `docker compose up app`[^2]
 3. Open the app/swagger *(a popup will appear, you need to add `swagger/index.html` to the url)*
 > Note: seeding may need some time to complete
 4. Read [the story](STORY.md)
