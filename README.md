@@ -5,8 +5,8 @@ In this task we will look into how we may need to optimize some SQL statements t
 ## Guidance
 
 1. Start this project in [Github Codespaces](https://github.com/features/codespaces)[^1]
-2. Start the SQL Server with `docker compose up`
-3. Start the dotnet project with `SEED=true dotnet run`[^2]
+2. Start the db and app `docker compose up`[^2]
+3. Open the app/swagger *(a popup will appear)*
 4. Read [the story](STORY.md)
 5. Read the [notes](NOTES.md)
 
@@ -19,9 +19,9 @@ In this task we will look into how we may need to optimize some SQL statements t
 * used techstack:
   * [Git](https://git-scm.com/)
   * [Github Codespaces](https://github.com/features/codespaces)
-  * [Docker]()
-  + [SQL Server]()
-  * [ASP.NET Core]()
+  * [SQL Server](https://www.microsoft.com/de-de/sql-server)
+  * [mssql extension](https://learn.microsoft.com/en-us/sql/tools/visual-studio-code/mssql-extensions?view=sql-server-ver16)
+  * [ASP.NET Core](https://learn.microsoft.com/de-de/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-7.0)
 
 ---
 

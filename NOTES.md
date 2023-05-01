@@ -1,4 +1,6 @@
-# Statements
+# Notes
+
+## Statements
 
 According to Alice this statement seems to be slow
 
@@ -12,7 +14,25 @@ JOIN Countries c ON c.Id = mc.CountryId
 JOIN Teams t ON t.Id = mc.TeamId 
 JOIN Members m ON m.Id = mc.MemberId 
 WHERE mc.MemberId = 1 -- Some member id
-AND mc.CountryId IN (17) -- Some country id
+AND mc.CountryId IN (1) -- Some country id
 
 SET STATISTICS TIME OFF
+```
+
+*(see [query.sql](query.sql) file to use with the mssql extension)*
+
+## SQL Server
+
+You can start the SQL Server with `docker compose`
+
+```bash
+docker compose up -d
+```
+
+## App
+
+If there are any issues with starting the app using `docker`one can start it directly using `dotnet`
+
+```bash
+dotnet run
 ```

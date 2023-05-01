@@ -1,0 +1,23 @@
+version: '3.2'
+services:
+  db:
+    image: ${IMAGE_DB:-mcr.microsoft.com/mssql/server}:${TAG_DB:-2022-latest}
+    user: root
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${DB_PASSWORD:-pass@word1}
+    ports:
+      - 1433:1433
+    volumes:
+      - db:/var/opt/mssql/data
+
+  app:
+    image: ghcr.io/whizus/job-interview-task-trees-of-data:latest
+    environment:
+      - Seed=true
+      - ConnectionStrings__AppDbContext=Server=host.docker.internal,1433; Database=app;Trusted_Connection=False;Encrypt=False;User Id=sa;Password=pass@word1
+    ports:
+      - 8080:80
+
+volumes:
+  db:
