@@ -5,9 +5,15 @@ In this task we will look into how we may need to optimize some SQL statements t
 ## Guidance
 
 1. Start this project in [Github Codespaces](https://github.com/features/codespaces)[^1]
-2. Start the db `docker compose up db` (wait until sqlserver manages to start, it may take time) and app `docker compose up app`[^2]
-3. Open the app/swagger *(a popup will appear, you need to add `swagger/index.html` to the url)*
-> Note: seeding may need some time to complete
+   1. Open a new Codespace and point it to this directory
+   2. Install extensions as required in your new codespace (e.g. SQL Server)
+2. Start the the database with the initial dataset
+   1. Start the db `docker compose up db` (wait until sqlserver manages to start, it may take time)
+   2. Start the app `docker compose up app` (It will generate some test data one can look into, it may take time)[^2]
+3. Have a look at the applications API Specification
+   1. Open the application using the provided port-forwarding URL (a popup should have appeared after you start the docker container) and append `/swagger/index.html` to the URL
+   
+   `NOTE: the application only becomes available after it has finished seeding the DB with initial data. This may take some time!`
 4. Read [the story](STORY.md)
 5. Read the [notes](NOTES.md)
 
@@ -28,4 +34,4 @@ In this task we will look into how we may need to optimize some SQL statements t
 
 [^1]: It's where the `<> Code` button is
 
-[^2]: It will generate some test data one can look into, it may take time :O
+[^2]: You can track the progress using `docker logs -f` or `docker compose logs -f`
