@@ -16,6 +16,7 @@ In this task we will look into how we may need to optimize some SQL statements t
    `NOTE: the application only becomes available after it has finished seeding the DB with initial data. This may take some time!`
 4. Read [the story](STORY.md)
 5. Read the [notes](NOTES.md)
+6. Prepare yourself to interactively work with this repository during the session
 
 ## Additional task
 
